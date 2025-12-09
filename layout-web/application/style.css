@@ -1,0 +1,23 @@
+p {
+  color: blue;
+}
+
+.container {
+  display: flex;
+  gap: 1rem; /* optional spacing between columns */
+}
+
+.column {
+  flex: 1; /* each column takes up equal space */
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.left {
+  background-color: #f9f9f9;
+}
+
+.right {
+  background-color: #e9e9e9;
+}
+

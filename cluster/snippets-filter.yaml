@@ -1,0 +1,12 @@
+apiVersion: gateway.nginx.org/v1alpha1
+kind: SnippetsFilter
+metadata:
+  name: ssi-on
+  namespace: default
+spec:
+  snippets:
+  - context: http.server.location
+    value: |
+      ssi on;
+      ssi_types text/html;
+
