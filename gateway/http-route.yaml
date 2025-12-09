@@ -25,13 +25,25 @@ spec:
     - path:
         type: PathPrefix
         value: /layout/
+    filters:
+    - type: URLRewrite
+      urlRewrite:
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /
     backendRefs:
     - name: layout-web
       port: 80
   - matches:
     - path:
         type: PathPrefix
-        value: /social-feed/
+        value: /social-feed
+    filters:
+    - type: URLRewrite
+      urlRewrite:
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /
     backendRefs:
     - name: social-feed-web
       port: 80
