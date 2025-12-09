@@ -11,19 +11,6 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /
-    filters:
-    - type: ExtensionRef
-      extensionRef:
-        group: gateway.nginx.org
-        kind: SnippetsFilter
-        name: ssi-on
-    backendRefs:
-    - name: efferent-web
-      port: 80
-  - matches:
-    - path:
-        type: PathPrefix
         value: /layout/
     filters:
     - type: URLRewrite
