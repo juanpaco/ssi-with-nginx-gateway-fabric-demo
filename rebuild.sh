@@ -16,7 +16,6 @@ popd
 
 pushd gateway
 kubectl apply -f /Users/ethan.garfolo/source/ssi/gateway/gateway.yaml
-kubectl apply -f /Users/ethan.garfolo/source/ssi/gateway/http-route.yaml
 kubectl apply -f /Users/ethan.garfolo/source/ssi/gateway/snippets-filter.yaml
 popd
 

@@ -64,43 +64,24 @@ ingress:
     #   hosts:
     #     - chart-example.local
 
-# -- Expose the service via gateway-api HTTPRoute
-# Requires Gateway API resources and suitable controller installed within the cluster
-# (see: https://gateway-api.sigs.k8s.io/guides/)
 httpRoute:
-  # HTTPRoute enabled.
-  enabled: false
-  # HTTPRoute annotations.
+  enabled: true
   annotations: {}
-  # Which Gateways this Route is attached to.
   parentRefs:
-  - name: gateway
+  - name: web-gw
     sectionName: http
-    # namespace: default
-  # Hostnames matching HTTP header.
-  hostnames:
-  - chart-example.local
-  # List of rules and filters applied.
+  hostnames: []
   rules:
   - matches:
     - path:
         type: PathPrefix
         value: /social-feed
-  #   filters:
-  #   - type: RequestHeaderModifier
-  #     requestHeaderModifier:
-  #       set:
-  #       - name: My-Overwrite-Header
-  #         value: this-is-the-only-value
-  #       remove:
-  #       - User-Agent
-  # - matches:
-  #   - path:
-  #       type: PathPrefix
-  #       value: /echo
-  #     headers:
-  #     - name: version
-  #       value: v2
+    filters:
+    - type: URLRewrite
+      urlRewrite:
+        path:
+          type: ReplacePrefixMatch
+          replacePrefixMatch: /social-feed
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
