@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Ingress NGINX will be retired in March 2026.
+Ingress NGINX [will be retired](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/) in March 2026.
 
-NGINX Gateway Fabric (NGF) is a Gateway-API-compliant replacement.
+[NGINX Gateway Fabric (NGF)](https://docs.nginx.com/nginx-gateway-fabric/) is a Gateway-API-compliant replacement.
 
 I wanted to validate that NGINX's SSI capabilities would work with NGF.
 
