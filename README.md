@@ -118,7 +118,7 @@ location ^~ /layout/ {
 }
 ```
 
-Notice `proxy_pass http://default_efferent-web_80$request_uri;`. For a reason I dont' understand, when that rule is invoked as part of an SSI directive's processing, the `$request_uri` is not the value provided in the SSI directive. It retains the original `/` from the browser's request.
+Notice `proxy_pass http://default_efferent-web_80$request_uri;`. For a reason I don't understand, when that rule is invoked as part of an SSI directive's processing, the `$request_uri` is not the value provided in the SSI directive. It retains the original `/` from the browser's request.
 
 For normal requests, that is exactly what would be desired. For the SSI directives, it would route the requests to `layout-web` correctly, but the path would always be what was entered into the brower's address bar. I verified this at one point by mounting `efferent-web` at `/efferent` rather than at `/`, and a request showed up in `layout-web`'s logs at `/efferent`. It doesn't just use `/`, it uses whatever was used in the address bar.
 
