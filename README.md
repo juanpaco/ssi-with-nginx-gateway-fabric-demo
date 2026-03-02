@@ -160,7 +160,7 @@ The requested URI is rewritten to what it was before and the request is passed a
 
 For my current research purposes, this works well enough, but I find it unsettling.
 
-I don't think the configuration generated without the `URLRewrite` is wrong, per se, but it isn't useful for endpoints that are meant to supply content via SSI. I intend to do more research to see if I've just approach configuration incorrectly or if there is a gap in NGF's configurability for this kind of endpoint
+I don't think the configuration generated without the `URLRewrite` is wrong, per se, but it isn't useful for endpoints that are meant to supply content via SSI. I intend to do more research to see if I've just approached configuration incorrectly or if there is a gap in NGF's configurability for this kind of endpoint
 
 ## Questions
 
