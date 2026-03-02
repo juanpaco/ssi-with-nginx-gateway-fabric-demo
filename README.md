@@ -122,7 +122,7 @@ Notice `proxy_pass http://default_efferent-web_80$request_uri;`. For a reason I 
 
 For normal requests, that is exactly what would be desired. For the SSI directives, it would route the requests to `layout-web` correctly, but the path would always be what was entered into the brower's address bar. I verified this at one point by mounting `efferent-web` at `/efferent` rather than at `/`, and a request showed up in `layout-web`'s logs at `/efferent`. It doesn't just use `/`, it uses whatever was used in the address bar.
 
-However, we then route is declared with that pointless `URLRewrite`, the nginx configuration generated is of the form (again, `layout-web`'s is used):
+However, when the route is declared with that pointless `URLRewrite`, the nginx configuration generated is of the form (again, `layout-web`'s is used):
 
 ```yaml
 location ^~ /layout/ {
