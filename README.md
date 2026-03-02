@@ -59,7 +59,7 @@ It works, which is good.
 
 Each application owns its own `httpRoute` configuration, which you'll find in its respective `helm/values.yml` file. Initially, the routing was configured in a centralized file, but one of my goals was to have the routing config live with the respective projects.
 
-However, once the routes were moved to the respective projects, and unfortunate behavior emerged.
+However, once the routes were moved to the respective projects, an unfortunate behavior emerged.
 
 Note that the route definitions for `layout-web` and `social-feed-web` include code like the following (`layout-web`'s is used):
 
