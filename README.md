@@ -18,6 +18,10 @@ I wanted to validate that NGINX's SSI capabilities would work with NGF.
   - `k3d cluster create demo --registry-use k3d-reg.localhost:5001`
 - kubectl
   - `brew install kubectl`
+- helm
+  - `brew install helm`
+- NGINX Gateway Fabric (with snippets enabled)
+  - `helm install ngf oci://ghcr.io/nginx/charts/nginx-gateway-fabric --wait --set nginxGateway.snippets.enable=true`
 
 The demo can probably be achieved without using k3d, but you'd need to set up your cluster and container registry another way.
 
