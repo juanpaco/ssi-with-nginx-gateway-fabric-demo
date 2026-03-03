@@ -10,3 +10,4 @@ pushd helm
 
 helm upgrade --install efferent-web . --namespace default && kubectl rollout restart deployment efferent-web
 
+popd

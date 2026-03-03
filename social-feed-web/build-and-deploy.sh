@@ -10,3 +10,4 @@ pushd helm
 
 helm upgrade --install social-feed-web . --namespace default && kubectl rollout restart deployment social-feed-web
 
+popd

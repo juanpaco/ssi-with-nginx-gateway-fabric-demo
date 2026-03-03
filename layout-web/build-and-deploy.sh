@@ -10,3 +10,4 @@ pushd helm
 
 helm upgrade --install layout-web . --namespace default && kubectl rollout restart deployment layout-web
 
+popd

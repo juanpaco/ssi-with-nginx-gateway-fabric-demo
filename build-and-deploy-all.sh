@@ -15,10 +15,9 @@ pushd social-feed-web
 popd
 
 pushd gateway
-kubectl apply -f /Users/ethan.garfolo/source/ssi/gateway/gateway.yaml
-kubectl apply -f /Users/ethan.garfolo/source/ssi/gateway/snippets-filter.yaml
+kubectl apply -f gateway.yaml
+kubectl apply -f snippets-filter.yaml
 popd
 
 kubectl rollout restart deployment ngf-nginx-gateway-fabric
 kubectl rollout restart deployment web-gw-nginx
-
